@@ -1,0 +1,172 @@
+<html lang="ja" class="js">
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+/*
+@font-face {
+  font-family: 'CircularStd';
+  src: url('./fonts/CircularStd-BookItalic.eot');
+  src: url('./fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-BookItalic.woff') format('woff'), url('../fonts/CircularStd-BookItalic.ttf') format('truetype'), url('../fonts/CircularStd-BookItalic.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'CircularStd';
+  src: url('./fonts/CircularStd-Book.eot');
+  src: url('./fonts/CircularStd-Book.eot?#iefix') format('embedded-opentype'), url('./fonts/CircularStd-Book.woff') format('woff'), url('./fonts/CircularStd-Book.ttf') format('truetype'), url('./fonts/CircularStd-Book.svg#bcc26993292869431e54c666aafa8fcd') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Regular';
+  src: url(./fonts/NotoSansJP-Regular.eot);
+  src: url(./fonts/NotoSansJP-Regular.eot?#iefix) format('embedded-opentype'),
+       url(./fonts/NotoSansJP-Regular.woff2) format('woff2'),
+       url(./fonts/NotoSansJP-Regular.woff) format('woff'),
+       url(./fonts/NotoSansJP-Regular.ttf) format('truetype'),
+       url(./fonts/NotoSansJP-Regular.svg#NotoSansJP-Regular) format('svg');
+  font-weight:400;
+  font-style:normal;
+}
+
+.background {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 3px;
+  background-image: url(./public/superform.gif);
+  border: 1px solid black;
+  background-size: 100% 100%;
+  background-color:black;
+}
+
+
+.background2{
+  background-image: url(./public/superform.gif);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color:black;
+  /*background-color:#171717;*/
+}
+
+.bottombar{
+  /*  
+  position:sticky;
+  position:-webkit-sticky;
+  */
+  position:fixed;
+  border: 14px solid black;
+  background-color:black;
+  bottom:0;
+  left:0;
+  color:black;
+  width:100%;
+}
+
+/*background: #94aace;*/
+
+.foreground{
+  color:black;
+  background: #b6c5dd;
+  font-size:18px;
+  font-family:"CircularStd",Arial,sans-serif;
+  font-weight:800;
+}
+
+.general{
+  color:black;
+  background: #b6c5dd;
+  font-size:12px;
+  font-family:"CircularStd",Arial,sans-serif;
+  font-weight:normal;
+  line-height:13px;
+}
+
+.backscript{
+  font-family:"NotoSansJP-Regular";
+	color:black;
+	opacity:0.2;
+	width:80%;
+	background:#f20200;
+  text-align:right;
+}
+
+.backscript2{
+	line-height:8px;
+	color:black;
+	opacity:0.1;
+	width:40%;
+	font-size:10px;
+	/*background:#f282f0;*/
+}
+
+.article-header{
+  font-size:18px;
+  font-weight:bold;
+  color:#fff;
+}
+
+.article-paragraph{
+  padding:8px 0px 0px 0px;
+  font-family:"CircularStd",Arial,sans-serif;
+  font-style:italic;
+}
+
+.clip1{
+  position:absolute;
+  background:black;
+  clip:rect(0px 20px 100px 4px);
+  width:50%;
+  text-align:right;
+  opacity:0.1;
+}
+
+
+</style>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<script>
+	window.onload=function(){
+		var logo=document.getElementById("logo");
+		var general=document.getElementById("general");
+		var blink=document.getElementById("blink-wipe");
+		TweenLite.to(logo,1,{top:"280px",left:"42px",opacity:0.9,ease:SlowMo.easeOut});	
+		TweenLite.to(general,2.3,{top:"280",opacity:0.9,ease:SlowMo.easeOut,delay:0,background:"#b6c5dd"});	
+	};
+</script>
+
+</head>
+<body class="background2" >
+<script type="text/javascript" src="./js/CSSPlugin.min.js"></script>
+<script type="text/javascript" src="./js/EasePack.min.js"></script>
+<script type="text/javascript" src="./js/TweenMax.min.js"></script>
+<script type="text/javascript" src="./js/TweenLite.min.js"></script>
+
+<div class="backscript2" style="text-align:right;opacity:0.1;position:absolute;top:18px;width:70%;">
+	<p > UNITED-this is the superformula:function sf3d(n, a) u = [- pi:.05:pi]; v = [- pi / 2:.05:pi / 2]; nu = length(u); nv = length(v); for i = 1:nu for j = 1:nv raux1 = abs(1 / a(1) * abs(cos(n(1) .* u(i) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * u(i) / 4))) .^ n(4); r1 = abs(raux1) .^ (- 1 / n(2)); raux2 = abs(1 / a(1) * abs(cos(n(1) * v(j) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * v(j) / 4))) .^ n(4); r2 = abs(raux2) .^ (- 1 / n(2)); x(i, j) = r1 * cos(u(i)) * r2 * cos(v(j)); y(i, j) = r1 * sin(u(i)) * r2 * cos(v(j)); z(i, j) = r2 * sin(v(j)); endfor; endfor; mesh(x, y, z); endfunction; </p>
+	<p > UNITEDfunction sf3d(n, a) u = [- pi:.05:pi]; v = [- pi / 2:.05:pi / 2]; nu = length(u); nv = length(v); for i = 1:nu for j = 1:nv raux1 = abs(1 / a(1) * abs(cos(n(1) .* u(i) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * u(i) / 4))) .^ n(4); r1 = abs(raux1) .^ (- 1 / n(2)); raux2 = abs(1 / a(1) * abs(cos(n(1) * v(j) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * v(j) / 4))) .^ n(4); r2 = abs(raux2) .^ (- 1 / n(2)); x(i, j) = r1 * cos(u(i)) * r2 * cos(v(j)); y(i, j) = r1 * sin(u(i)) * r2 * cos(v(j)); z(i, j) = r2 * sin(v(j)); endfor; endfor; mesh(x, y, z); endfunction; </p>
+	<p  > UNITED3.141592653589793238462643383279502896198946767837449448255379774726</p>
+	<p > UNITEDfunction sf3d(n, a) u = [- pi:.05:pi]; v = [- pi / 2:.05:pi / 2]; nu = length(u); nv = length(v); for i = 1:nu for j = 1:nv raux1 = abs(1 / a(1) * abs(cos(n(1) .* u(i) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * u(i) / 4))) .^ n(4); r1 = abs(raux1) .^ (- 1 / n(2)); raux2 = abs(1 / a(1) * abs(cos(n(1) * v(j) / 4))) .^ n(3) + abs(1 / a(2) * abs(sin(n(1) * v(j) / 4))) .^ n(4); r2 = abs(raux2) .^ (- 1 / n(2)); x(i, j) = r1 * cos(u(i)) * r2 * cos(v(j)); y(i, j) = r1 * sin(u(i)) * r2 * cos(v(j)); z(i, j) = r2 * sin(v(j)); endfor; endfor; mesh(x, y, z); endfunction; </p>
+</div>
+<div class="backscript"  style="opacity:0.1;font-color:white;line-height:16px;position:absolute;top:100px;left:20%;width:55%">
+  <p class="backscript"  > UNITED </p>
+  <p class="backscript"  > UNITED </p>
+	<p style="color:white" > UNITEDDeep Learning Techniques for Music Generation – A SurveyというDeep Learningを用いた音楽生成手法をまとめたサーベイ論文が公開されてます。著者は、現在Spotifyの研究所のリーダーを務めるPachet氏を中心にしたグループです。 今回その内容を日本語にまとめてみました。Medium上で公開しています。 サーベイの切り口としては、生成の対象(メロディー、リズム etc)、入出力のデータ、データのフォーマット(MIDI/テキスト etc)、モデルのアーキテクチャ(RNN, CNN)、学習の戦略(GAN)などです。論文では聞けない、各論文のシステムによって生成された音楽もあわせて掲載しているので、ぜひ読んで・聞いてみてください!  </p>
+	<p class="backscript"  >K)@T@UNITED </p>
+	<p  class="backscript"  > UNITEDDeep Learning Techniques for Music Generation – A SurveyというDeep Learningを用いた音楽生成手法をまとめたサーベイ論文が公開されてます。著者は、現在Spotifyの研究所のリーダーを務めるPachet氏を中心にしたグループです。 今回その内容を日本語にまとめてみました。Medium上で公開しています。 サーベイの切り口としては、生成の対象(メロディー、リズム etc)、入出力のデータ、データのフォーマット(MIDI/テキスト etc)、モデルのアーキテクチャ(RNN, CNN)、学習の戦略(GAN)などです。論文では聞けない、各論文のシステムによって生成された音楽もあわせて掲載しているので、ぜひ読んで・聞いてみてください!  TESTS ON OPACITY</p>
+	<p class="backscript"  >iwjeoifjfjf f3ff3jifosijdfodASDFAFKFPK#))KR)KRDFMVMMVVK)@T@UNITED </p>
+</div>
+	<div id="logo" class="foreground" style="opacity:0;top:170px;left:42px;position:relative;width:24%;padding:22px 30px 10px 15px;border-radius: 15px 40px 5px 5px;border:solid 1px"> objective interaction 
+	<div style="width:23%;font-size:4px;nowrap"> @@@@@@@___+++++____________x_____1230_20388821232{#__@#$)!))__02()!)@()):":;;+_(___)@)_______________PQW_EP}OOOOOOO____________________________________________ITP________________________________ascii_keys </div></div>
+	<div id="general" class="general" style="background:#020200;opacity:0;left:42px;top:300px;position:relative;width:20%;padding:12px 10px 60px 10px ;border-radius:0px 12px;color:black;border:solid black 3px;margin:0px;font-size:12px">
+  <div  >
+    <div class="article-header">superformula</div>
+    <p class="article-paragraph">	
+      The superformula is a generalization of the superellipse and was proposed by Johan Gielis around 2000. It is thought that the formula can be used to describe many complex shapes and curves that are found in nature.
+    </p>
+    </div>
+  </div>
+  <div  class="bottombar clip">&nbsp;</div>
+</body>
+</html>
