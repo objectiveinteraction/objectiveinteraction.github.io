@@ -54,7 +54,6 @@
 .background2{
   background-image: url(./public/superform.gif);
   background-repeat:no-repeat;
-  background-size:cover;
   background-color:black;
   /*background-color:#171717;*/
   background-size:cover;
@@ -64,12 +63,33 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  
 }
 
+body:before{
+  content: "";
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background: url(./public/superform.gif) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+  background-color:black;
+}
 
+/*
 @media only screen {
-  background-size:100% 100vh;
+  body{
+    background-size:100% 100vh;
+  }
 }
+*/
 
 .bottombar{
   /*  
@@ -157,7 +177,7 @@
 </script>
 
 </head>
-<body class="background2" >
+<body >
 <script type="text/javascript" src="./js/CSSPlugin.min.js"></script>
 <script type="text/javascript" src="./js/EasePack.min.js"></script>
 <script type="text/javascript" src="./js/TweenMax.min.js"></script>
